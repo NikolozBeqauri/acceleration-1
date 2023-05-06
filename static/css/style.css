@@ -178,8 +178,45 @@ header{
     font-weight: bold;
 }
 /*sliderTitleEnd*/
+/*modal*/
+.modal-wrapper{
+    display: none;
+}
+.modal-wrapper-active {
+    position: fixed;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    top: 0;
+    z-index: 6;
+    background-color: rgba(0, 0, 0, .5);
+  }
+.modal-window{
+    padding: 2.5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    position: relative;
+    background-color: var(--main-white);
+}
+.modal-close-button{
+    cursor: pointer;
+}
+.modal-close-button img{
+    top: 1rem;
+    right: 1rem;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+}
+
+/*modalEnd*/
 /*services*/
 .services-section{
+    position: relative;
     display: flex;
     justify-content: space-between;
     margin-top: 3.5rem;    
