@@ -184,22 +184,22 @@ header{
 }
 .modal-wrapper-active {
     position: fixed;
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
     inset: 0;
-    top: 0;
     z-index: 6;
     background-color: rgba(0, 0, 0, .5);
   }
 .modal-window{
+    text-align: center;
     padding: 2.5rem 5rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
     align-items: center;
     position: relative;
-    background-color: var(--main-white);
+    background: linear-gradient(90deg,#08AEEA 0.00%,#2AF598 100.00%);
 }
 .modal-close-button{
     cursor: pointer;
@@ -212,7 +212,9 @@ header{
     height: 3rem;
     cursor: pointer;
 }
-
+.modal-body img{
+    border-radius: 10px;
+}
 /*modalEnd*/
 /*services*/
 .services-section{
@@ -800,6 +802,9 @@ footer{
         padding: .5rem;
         width: 80%;
    }
+   .modal-window{
+        width: 95%;
+    }
 }
 @media (max-width: 470px) {
     header nav{
@@ -837,5 +842,8 @@ footer{
     .booking-modal-header h2{
         font-size: 1.3rem;
         margin-top: 2rem;
+    }
+    .modal-window{
+        padding: 2.5rem .5rem;
     }
 }
