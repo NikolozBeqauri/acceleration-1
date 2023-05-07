@@ -28,6 +28,7 @@ function navLinksToggle() {
 }
 navBurger.addEventListener("click", navLinksToggle)
 /*burgerEnd*/
+//
 const buttons = document.querySelectorAll("[data-carousel-button]")
 
 buttons.forEach(button => {
@@ -88,6 +89,7 @@ cardsData.forEach((cardData) => {
 
   const image = document.createElement('img');
   image.setAttribute('src', cardData.imageUrl);
+  image.setAttribute('alt', cardData.title); // set alt attribute
 
   const title = document.createElement('h2');
   title.textContent = cardData.title;
