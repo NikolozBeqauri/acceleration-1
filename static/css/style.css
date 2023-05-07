@@ -5,6 +5,11 @@
     --main-font-weight: 400;
     --secondary-font-weight: 500;
 }
+body{
+    font-family: 'Alkatra', cursive;
+font-family: 'Delicious Handrawn', cursive;
+font-family: 'Roboto', sans-serif;
+}
 .primary-title-style{
     display: flex;
     flex-direction: column;
