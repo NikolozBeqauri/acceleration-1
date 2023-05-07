@@ -103,7 +103,7 @@ cardsData.forEach((cardData) => {
 });
 /*cardsEnd*/
 
-/*Modal*/
+/*MainModal*/
 
 // Select the modal wrapper and close button
 const modalWrapper = document.querySelector('.modal-wrapper');
@@ -147,4 +147,23 @@ window.addEventListener('click', (e) => {
     modalWrapper.classList.remove('modal-wrapper-active');
   }
 })
-  /*ModalEnd*/
+  /*MainModalEnd*/
+
+
+  /*bookingModal*/
+  const bookingModalOpenBtn = document.querySelector(".happy-travelers-footer-button")
+  const bookingModalWrapper = document.querySelector(".booking-modal-wrapper")
+  const bookingModalCloseBtn = document.querySelector(".booking-modal-close-button")
+
+
+  function modalToggle () {
+    bookingModalWrapper.classList.toggle("booking-modal-wrapper-active")
+}
+
+window.addEventListener('click', (e) => {
+    if(e.target == document.querySelector(".booking-modal-wrapper")) {
+        modalToggle();
+    }
+})
+bookingModalOpenBtn.addEventListener("click", modalToggle);
+bookingModalCloseBtn.addEventListener("click", modalToggle);

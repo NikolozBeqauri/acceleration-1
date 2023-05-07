@@ -454,6 +454,76 @@ header{
     cursor: pointer;
 }
 /*tourPackageEnd*/
+/*BookingModal*/
+.booking-modal-wrapper{
+    display: none;
+}
+.booking-modal-wrapper-active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    z-index: 6;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, .5);
+}
+.booking-modal-header{
+    margin-top: 50px;
+}
+.booking-modal-header h2{
+    font-size: 2rem;
+}
+.booking-modal-window{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 13%;
+    position: relative;
+    padding: 2rem;
+    background: linear-gradient(90deg,#08AEEA 0.00%,#2AF598 100.00%);
+    width: 70%;
+    height: 70%;
+    border-radius: 5rem;
+}
+.booking-modal-window img{
+    position: absolute;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    top: 3%;
+    right: 3%;
+}
+.booking-modal-body{
+    display: grid;
+    width: 90%;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+.booking-modal-body div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.booking-modal-body div input{
+    padding: .6rem;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+}
+.booking-modal-body-submit-input{
+    position: absolute;
+    bottom: 10%;
+    right: 50%;
+    transform: translateX(50%);
+    width: 20%;
+}
+.booking-modal-body-submit-input{
+    display: inline-block;
+}
+/*BookingModalEnd*/
 /*comments*/
 .happy-travelers-section{
     display: flex;
@@ -504,7 +574,6 @@ header{
     align-items: center;
     justify-content: flex-end;
     padding: 0rem 0rem 3rem 0rem;
-    cursor: pointer;
     gap: 2.5rem;
     width: 100%;
     height: 450px;
@@ -600,6 +669,7 @@ footer{
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #b2b2b2;
+    gap: 1rem;
     padding: 0rem 0rem 2rem 0rem;
 }
 .footer-main-div-texts{
@@ -634,13 +704,21 @@ footer{
     width: 300px;
     border-radius: 5px;
 }
-.footer-input-div img{
+.footer-input-div form div{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     position: absolute;
-    right: .4%;
-    top: 43%;
-    width: 40px;
-    height: 42px;
+    top: 44%;
+    right: 0;
     cursor: pointer;
+    width: 2.6rem;
+    height: 2.6rem;
+    background: linear-gradient(90deg,#08AEEA 0.00%,#2AF598 100.00%);
+}
+.footer-input-div form div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 /*footerEnd*/
 @media (max-width: 1260px) {
@@ -687,6 +765,14 @@ footer{
     header nav ul{
         display: none;
     }
+    .booking-modal-body{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
+    }
+   .booking-modal-window{
+    gap: 1rem;
+    height: 95%;
+   }
 }
 @media (max-width: 590px) {
     .our-tour-section{
@@ -740,5 +826,16 @@ footer{
         align-items: center;
         gap: 2rem;
         flex-direction: column;
+    }
+    .booking-modal-body-submit-input{
+        width: 90%;
+    }
+    .booking-modal-window  {
+        padding: 0px;
+        border-radius: 14px;
+    }
+    .booking-modal-header h2{
+        font-size: 1.3rem;
+        margin-top: 2rem;
     }
 }

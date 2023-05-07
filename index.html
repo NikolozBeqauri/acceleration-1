@@ -217,7 +217,36 @@
             </div>
             <div class="happy-travelers-footer">
                 <h3>Ready to plan your trip?</h3>
-                <button>BOOK NOW</button>
+                <button class="happy-travelers-footer-button">BOOK NOW</button>
+            </div>
+            <div class="booking-modal-wrapper"> 
+                <div class="booking-modal-window">
+                    <img class="booking-modal-close-button" src="./static/image/icon/cross-icon.png" alt="cross icon">
+                    <div class="booking-modal-header">
+                        <h2>Ready to order?!</h2>
+                    </div>
+                    <form class="booking-modal-body">
+                        <div>
+                            <label for="#">FName</label>
+                            <input  required maxlength="35" minlength="3" type="text">
+                        </div>
+                        <div>
+                            <label for="#">Place</label>
+                            <input required maxlength="35" minlength="3" type="text">
+                        </div>
+                        <div>
+                            <label for="#">Phone</label>
+                            <input required maxlength="35" minlength="3" type="tel">
+                        </div>
+                        <div>
+                            <label for="#">Email</label>
+                            <input required maxlength="35" minlength="3" type="email">
+                        </div>
+                        <div class="booking-modal-body-submit-input">
+                            <input type="submit">
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
 
@@ -331,7 +360,9 @@
                     <form>
                         <label for="#">Subscribe to our newsletter</label>
                         <input required maxlength="35" minlength="3" type="email" placeholder="Your email">
-                        <img src="./static/image/services/for-footer-input.jpg" alt="blue square">
+                        <div>
+                            <img src="./static/image/icon/footer-dot.png" alt="dot">
+                        </div>
                     </form>
                 </div>
             </div>
